@@ -1,0 +1,372 @@
+.bus-page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 80px);
+}
+
+/* SEARCH SUMMARY HEADER */
+.search-summary-banner {
+  background: linear-gradient(135deg, var(--dark-navy) 0%, #1a2c4d 100%);
+  border-radius: 16px;
+  padding: 30px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  box-shadow: var(--shadow-sm);
+}
+
+.summary-left h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.route-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.arrow-divider {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+.travel-date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.results-count-badge {
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(235, 60, 73, 0.2);
+}
+
+/* BUS LIST CONTAINER */
+.bus-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* NO BUSES CARD */
+.no-buses-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.no-bus-icon {
+  font-size: 64px;
+  color: #ccd6e0;
+  margin-bottom: 24px;
+}
+
+.no-buses-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 12px;
+}
+
+.no-buses-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* BUS RESULT CARD */
+.bus-result-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  align-items: center;
+  gap: 30px;
+  transition: var(--transition);
+}
+
+.bus-result-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* TOP SECTION */
+.card-top-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bus-visual-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(235, 60, 73, 0.06);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bus-card-icon {
+  font-size: 26px;
+  color: var(--primary-color);
+}
+
+.bus-header-details {
+  flex: 1;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.title-row h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin: 0;
+}
+
+.rating-badge {
+  background: #24b273;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-icon {
+  font-size: 10px;
+}
+
+.bus-type-lbl {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* MIDDLE SECTION */
+.timing-details-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-col.text-right {
+  text-align: right;
+}
+
+.time-lbl {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.city-lbl {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.duration-col {
+  flex: 1;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dur-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9babbf;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.line-connector {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.line-path {
+  width: 100%;
+  height: 2px;
+  background: #ccd6e0;
+}
+
+.dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccd6e0;
+}
+
+.start-dot {
+  left: 0;
+}
+
+.end-dot {
+  right: 0;
+  background: var(--primary-color);
+}
+
+/* BOTTOM SECTION */
+.card-bottom-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.seats-info {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.seats-count {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.price-tag {
+  display: flex;
+  align-items: baseline;
+}
+
+.currency {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-right: 2px;
+}
+
+.price-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.select-seats-btn {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.select-seats-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(235, 60, 73, 0.2);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .bus-result-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .card-bottom-section {
+    grid-column: span 2;
+    border-top: 1px solid #f1f3f5;
+    padding-top: 15px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .bus-result-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card-top-section {
+    width: 100%;
+  }
+
+  .card-bottom-section {
+    grid-column: span 1;
+  }
+
+  .search-summary-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .results-count-badge {
+    align-self: flex-start;
+  }
+
+  .duration-col {
+    margin: 0 15px;
+  }
+}

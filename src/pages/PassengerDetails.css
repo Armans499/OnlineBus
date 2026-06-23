@@ -1,0 +1,224 @@
+.passengers-page-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 80px);
+}
+
+/* HEADER SECTION */
+.passenger-header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.passenger-header-section h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 6px;
+}
+
+.passenger-subheader {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.seats-summary-badge {
+  background: rgba(235, 60, 73, 0.08);
+  border: 1px solid rgba(235, 60, 73, 0.2);
+  color: var(--primary-color);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* CARDS LIST */
+.passenger-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* NO SEATS CARD */
+.no-seats-selected-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.no-seats-selected-card h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 10px;
+}
+
+.no-seats-selected-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.back-home-btn {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.back-home-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* PASSENGER FORM CARD */
+.passenger-form-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.passenger-form-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(235, 60, 73, 0.15);
+}
+
+.passenger-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.avatar-icon-bg {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(235, 60, 73, 0.08);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.passenger-card-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.seat-badge {
+  background: var(--dark-navy);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+/* INPUTS GRID */
+.passenger-inputs-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr;
+  gap: 20px;
+}
+
+.input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-field-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.input-field-group input,
+.input-field-group select {
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a202c;
+  outline: none;
+  transition: var(--transition);
+  font-family: inherit;
+  width: 100%;
+}
+
+.input-field-group input::placeholder {
+  color: #a0aec0;
+}
+
+.input-field-group input:focus,
+.input-field-group select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(235, 60, 73, 0.08);
+}
+
+/* ACTION ROW */
+.button-action-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.continue-payment-btn {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 35px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(235, 60, 73, 0.2);
+}
+
+.continue-payment-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 6px 20px rgba(235, 60, 73, 0.3);
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .passenger-inputs-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .continue-payment-btn {
+    width: 100%;
+  }
+}

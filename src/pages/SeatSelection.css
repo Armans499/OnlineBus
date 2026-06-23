@@ -1,0 +1,334 @@
+.seats-page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 80px);
+}
+
+/* PAGE HEADER */
+.page-header-row {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header-row h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 6px;
+}
+
+.bus-subinfo {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.route-timing {
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* MAIN LAYOUT */
+.seats-main-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* BUS CABIN CARD */
+.bus-cabin-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 3px solid #ccd6e0;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-sm);
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cabin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.cabin-gate {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--light-gray);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.driver-cockpit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.steering-icon {
+  font-size: 24px;
+  animation: rotateSteering 4s infinite ease-in-out;
+}
+
+.driver-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@keyframes rotateSteering {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(30deg); }
+}
+
+/* SEATS GRID */
+.seats-grid-cabin {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.seat-row-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seat-pair {
+  display: flex;
+  gap: 12px;
+}
+
+.aisle-space {
+  width: 50px;
+}
+
+.last-row-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 15px;
+  border-top: 2px solid var(--border-color);
+  padding-top: 20px;
+}
+
+/* SEAT BOX ITEM */
+.seat-box-item {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  border: 2px solid #a0aec0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a5568;
+  position: relative;
+  transition: var(--transition);
+}
+
+.seat-box-item::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 3px;
+  right: 3px;
+  height: 6px;
+  border-radius: 2px;
+  background: #a0aec0;
+  transition: var(--transition);
+}
+
+.seat-box-item:hover:not(.booked) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.seat-box-item.booked {
+  background: #e2e8f0;
+  border-color: #cbd5e0;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.seat-box-item.booked::after {
+  background: #cbd5e0;
+}
+
+.seat-box-item.selected {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.seat-box-item.selected::after {
+  background: var(--primary-hover);
+}
+
+/* CHECKOUT SUMMARY CARD */
+.checkout-summary-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.checkout-summary-card h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 24px;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.summary-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.summary-val {
+  font-weight: 600;
+  color: var(--dark-navy);
+}
+
+.summary-val.highlight {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.divider-line {
+  height: 1px;
+  background: var(--border-color);
+  margin: 8px 0;
+}
+
+.total-row {
+  font-size: 16px;
+}
+
+.total-row .summary-label {
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.total-price {
+  font-size: 28px;
+  font-weight: 850;
+  color: var(--primary-color);
+}
+
+.proceed-checkout-btn {
+  width: 100%;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(235, 60, 73, 0.2);
+}
+
+.proceed-checkout-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 6px 20px rgba(235, 60, 73, 0.3);
+  transform: translateY(-1px);
+}
+
+/* LEGEND BAR */
+.seat-legend-bar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  background: #ffffff;
+  padding: 15px 30px;
+  border-radius: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.legend-color {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid;
+}
+
+.available-col {
+  background: #ffffff;
+  border-color: #a0aec0;
+}
+
+.booked-col {
+  background: #e2e8f0;
+  border-color: #cbd5e0;
+}
+
+.selected-col {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .seats-main-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .checkout-summary-card {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
